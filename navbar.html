@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        
+        }
+
+     .cn{
+        background-color: black;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+
+     }
+ @media (min-width:600px){
+     .nav1{
+       position: absolute;
+       top:15px;
+       right: 0;
+
+
+     }
+     .nav1 ul li{
+      
+        display: inline;
+        margin-right: 20px;
+        padding: 20px;
+
+     }
+     .nav1 ul li a{
+      
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        justify-content: center;
+
+     }
+     .nav1 ul li a:hover{
+      color: gray;
+     }
+
+     .he{
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+     }
+     .navbt{
+        display: none;
+     } 
+
+    }
+@media (max-width:600px){
+     .nav1 ul {
+        list-style-type: none;
+        padding: 0;
+     }
+
+
+     .nav1 ul li{
+            text-decoration: none;
+        
+            font-weight: bold;
+            margin-top: 17px;
+            border-bottom:1px solid wheat;
+            text-align: center;
+     }
+
+     .nav1 ul li a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-top: 17px;
+            border-bottom:1px solid wheat;
+            
+            
+     }
+
+     .he{
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: bold;
+
+    
+     }
+ 
+    .navbt{
+        border: none;
+        position: absolute;
+        right: 15px;
+        cursor: pointer;
+        padding: 4px;
+        background-color: blue;
+    }   
+    
+    
+    .navbt span{
+   display: block;
+   width: 20px;
+   border-top: 1px solid rgb(255, 255, 255);
+    }     
+
+
+    .navbt span:not(:last-child){
+   margin-bottom: 5px;
+    }
+
+   .hide{
+    display: none;
+   }
+    
+}
+    </style>
+    
+</head>
+<body>
+    <div class="cn">
+        <a href="http://" class="he">Navbar</a>
+        <button class="navbt">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav1 hide">
+            <ul>
+                <li><a href="http://">Home</a></li>    
+                <li><a href="http://">Product</a></li>    
+                <li><a href="http://">About us</a></li>    
+                <li><a href="http://">Contact</a></li>    
+            </ul>
+        </div>
+    </div>
+        <script>
+            document.querySelector(".navbt").onclick=function(){
+                document.querySelector(".nav1").classList.toggle("hide");
+            }
+        </script>
+</body>
+</html>
